@@ -49,9 +49,6 @@ Latest Version as PDF here -> [PDF](https://bitbucket.hyperstone.de/projects/PG/
 
 <br>
 
-The only things that have to be changed are the Variables `TARGET_PDF` (should be `your_main_texfile.pdf`)
- and `PROJECT_PATH` should be your local path that contains your latex project and your ready to go.
-Other than per the giant command above the project can also be compiled via the Makefile in the project. <br>
-Just hit `make` to compile or `make clean` to delete delete the output directory and the current pdf file!
+To compile the project via the Makefile just hit `make` to compile it and `make clean` to delete the current pdf version after updating.
 
 
