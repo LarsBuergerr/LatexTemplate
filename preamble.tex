@@ -1,0 +1,73 @@
+\documentclass[11pt]{report}
+
+\newcommand{\sectionsPath}{sections/}	%%Sections path
+\newcommand{\code}[1]{\texttt{#1}}
+
+\usepackage[a4paper,left=3cm,right=3cm,bottom =2cm]{geometry}
+
+%for url links%
+\usepackage{url}
+\usepackage{graphicx}
+
+%title%
+\usepackage{titlesec}
+
+\graphicspath{ {./figures/} }
+\titleformat{\chapter}
+  {\normalfont\bfseries\Huge}{\thechapter}{22pt}{\Huge}
+
+\makeatletter
+\let\my@chapter\@chapter
+\renewcommand*{\@chapter}{%
+  \addtocontents{lol}{\protect\addvspace{10pt}}%
+  \my@chapter}
+\makeatother
+
+\title{Latex Template}
+\author{Lars Bürger}
+\date{\today}
+
+% line spacing
+\usepackage{setspace}
+% links in references
+\usepackage{hyperref}
+% smart references
+\usepackage[noabbrev,nameinlink]{cleveref}
+
+% wrap text around images
+\usepackage{wrapfig}
+
+% line spacing
+\usepackage{setspace}
+\setstretch{1.25}
+
+% float at exactly here
+\usepackage{float}
+
+% rotate figures
+\usepackage{adjustbox}
+\usepackage{blindtext}
+
+%\usepackage{biblatex}
+
+\usepackage{listings}
+\usepackage{color}
+
+%Code highlighting
+\usepackage[outputdir=outdir]{minted}
+\usemintedstyle{perldoc}
+\usepackage[table,xcdraw]{xcolor}
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage[backend=bibtex]{biblatex}
+\addbibresource{../citation.bib}
+
+\usepackage{booktabs}
+
+\input{acronyms.tex}
+
+% list all used packages and their versions to the logfile
+\listfiles

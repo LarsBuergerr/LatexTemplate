@@ -1,0 +1,31 @@
+%-----------------------preamble-------------------------
+
+\input{preamble}
+
+%-----------------------citation-------------------------
+
+
+%-----------------------begin of document----------------
+
+\begin{document}
+
+\input{\sectionsPath/title.tex}
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\printacronyms[heading=chapter*]
+\newpage
+\pagenumbering{arabic}
+
+\chapter{Introduction}
+\input{\sectionsPath/intro.tex}
+
+\chapter{Execution}
+\input{\sectionsPath/execution.tex}
+
+\chapter{Conclusion}
+\input{\sectionsPath/conclusion.tex}
+
+\printbibliography%Prints bibliography
+
+\end{document}
